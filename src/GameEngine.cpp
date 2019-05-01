@@ -23,42 +23,64 @@ string GameEngine::getUserInput() {
 void GameEngine::goNextRound() {
 	if (round == R_PREFLOP) {
 		round = R_FLOP;
+		myTable.progressRound();
 	}
 	else if (round == R_FLOP) {
 		round = R_TURN;
+		myTable.progressRound();
 	}
 	else if (round == R_TURN) {
 		round = R_RIVER;
+		myTable.progressRound();
 	}
 	else if (round == R_RIVER) {
-		initialize();
+		resetGame();
 	}
+
+}
+
+void GameEngine::resetGame() {
+	this->round = R_PREFLOP;
+	myTable.progressGame();
 }
 
 void GameEngine::performAction(Action act, int amount) {
 	int current = myTable.currentIndex;
+	int currentWrapped = myTable.wrap(current);
 
 	//if player is out, move on
-	if (!myTable.players[current].canDecide()) {
+	if (!myTable.players[currentWrapped].canDecide()) {
 		myTable.currentIndex++;
 		return;
 	}
 
 	if (act == A_CHECK) {
-		myTable.players[current].bet(0);
+		myTable.players[currentWrapped].bet(0);
 	}
 	else if (act == A_FOLD) {
-		myTable.players[current].folded = true;
+		myTable.players[currentWrapped].folded = true;
 	}
-	else if (act == A_CALL) {	//d o something
-		myTable.players[current].bet(myTable.getHigh() - myTable.players[current].wager);
+	else if (act == A_CALL) {
+		myTable.players[currentWrapped].bet(myTable.getHigh() - myTable.players[currentWrapped].wager);
 	}
 	else if (act == A_BET) {
-		myTable.players[current].bet(amount);
+		//if invalid bet sizing, return
+		if (myTable.players[currentWrapped].wager + amount < myTable.getHigh()) {
+			return;
+		}
+		myTable.players[currentWrapped].bet(amount);
 	}
 
-
-	myTable.currentIndex++;
+	//if we've gone through everyone and everyone's either
+	//limped or folded, then we continue
+	int nextPlayer = myTable.wrap(current + 1);
+	if (current >= myTable.players.size()
+		&& myTable.getHigh() <= myTable.players[nextPlayer].wager) {
+		goNextRound();
+	}
+	else {
+		myTable.currentIndex++;
+	}
 }
 
 void GameEngine::playRound() {

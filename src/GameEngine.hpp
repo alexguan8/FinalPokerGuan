@@ -40,5 +40,7 @@ namespace guanpokergame {
 		void playRound();
 
 		void goNextRound();
+
+		void resetGame();
 	};
 }

@@ -13,11 +13,6 @@ Table::Table() {
 
 	//adds the players
 	this->init();
-
-	//puts in the ante
-	for (int i = 0; i < players.size(); i++) {
-		players[i].bet(ANTE);
-	}
 }
 
 void Table::addPlayer(Player p) {
@@ -80,6 +75,11 @@ void Table::deal() {
 	deck.shuffle();
 	dealHoleCards();
 	dealCommunityCards();
+
+	//put in ante
+	for (int i = 0; i < players.size(); i++) {
+		players[i].bet(ANTE);
+	}
 }
 
 int Table::getHigh() {
@@ -139,7 +139,7 @@ void Table::clear() {
 	}
 }
 
-void Table::progress() {
+void Table::progressRound() {
 	this->currentIndex = 1;
 
 	for (int i = 0; i < players.size(); i++) {
@@ -148,4 +148,43 @@ void Table::progress() {
 	}
 }
 
+int Table::getWinner() {
+	int p1Eval = getHandEvaluation(0);
+	int p2Eval = getHandEvaluation(1);
+
+	if (p1Eval > p2Eval) {
+		return 0;
+	}
+	else if (p1Eval == p2Eval) {
+		return -1;
+	}
+	else {
+		return 1;
+	}
+}
+
+void Table::progressGame() {
+	int winner = getWinner();
+
+	//split pot if no winner (same hand)
+	if (winner == -1) {
+		int split = pot / players.size();
+		for (int i = 0; i < players.size(); i++) {
+			players[i].stack += split;
+		}
+	}	//otherwise winner takes entire pot
+	else {
+		players[winner].stack += pot;
+	}
+
+	this->currentIndex = 1;
+
+	for (int i = 0; i < players.size(); i++) {
+		pot += players[i].wager;
+		players[i].wager = 0;
+	}
+
+	deal();
+
+}
 

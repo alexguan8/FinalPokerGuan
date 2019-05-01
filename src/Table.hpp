@@ -35,6 +35,7 @@ namespace guanpokergame {
 
 		int getHandEvaluation(int playerIndex);
 
+		int getWinner();
 		int getWinner(vector <int> players);
 
 		int getPot();
@@ -52,9 +53,12 @@ namespace guanpokergame {
 
 		void dealHoleCards();
 		void dealCommunityCards();
+		/** Clears holecards, shuffles deck, redeals. */
 		void deal();
 
 		/** Do the end of round actions. */
-		void progress();
+		void progressRound();
+		/** Do the end of game actions. */
+		void progressGame();
 	};
 }

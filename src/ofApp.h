@@ -45,6 +45,8 @@ class ofApp : public ofBaseApp{
 		ofImage p1WagerImg;
 		ofImage p2WagerImg;
 
+		ofImage potImg;
+
 		ofImage backgroundTable;
 
 		//AUDIO
@@ -52,4 +54,8 @@ class ofApp : public ofBaseApp{
 
 		//datxgui
 		ofxDatGui* gui;
+		ofxDatGuiTextInput* myInput;
+
+		void onTextInputEvent(ofxDatGuiTextInputEvent e);
+		void onButtonEvent(ofxDatGuiButtonEvent e);
 };
