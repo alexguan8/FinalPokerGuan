@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Card.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Deck.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameEngine.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Player.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PokerTests.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Table.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omp\CardRange.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omp\CombinedRange.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omp\EquityCalculator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\omp\HandEvaluator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{70c23526-e703-4b45-9b18-e1e2e22de587}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Card.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\catch.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Deck.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameEngine.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Player.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SmartStrategy.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Table.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omp\CardRange.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omp\CombinedRange.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omp\Constants.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omp\EquityCalculator.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omp\Hand.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omp\HandEvaluator.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\libdivide\libdivide.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omp\OffsetTable.hxx">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omp\Random.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ttest\ttest.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\omp\Util.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc">
+      <Filter>src</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
