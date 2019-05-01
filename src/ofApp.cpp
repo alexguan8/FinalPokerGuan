@@ -16,6 +16,9 @@ void ofApp::setup(){
 	p2WagerImg.load("images/chips.png");
 
 	loadCardImages();
+
+	//gui
+	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
 }
 
 void ofApp::loadCardImages() {

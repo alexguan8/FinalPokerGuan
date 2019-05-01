@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxDatGui.h"
 #include <iostream>
 #include "GameEngine.hpp"
 
@@ -48,4 +49,7 @@ class ofApp : public ofBaseApp{
 
 		//AUDIO
 		ofSoundPlayer backgroundMusic;
+
+		//datxgui
+		ofxDatGui* gui;
 };
