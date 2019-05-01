@@ -80,6 +80,8 @@ void Table::deal() {
 	for (int i = 0; i < players.size(); i++) {
 		players[i].bet(ANTE);
 	}
+
+	pot = 0;
 }
 
 int Table::getHigh() {
@@ -136,6 +138,7 @@ int Table::getBBIndex() {
 void Table::clear() {
 	for (int i = 0; i < players.size(); i++) {
 		players[i].clearCards();
+		players[i].folded = false;
 	}
 }
 
@@ -174,8 +177,9 @@ void Table::progressGame() {
 
 	int winner = getWinner();
 
+	//the person who did not fold collects all the wagers and the pot
 	if (playerFolded >= 0) {
-		players[wrap(playerFolded + 1)].stack += pot;
+		players[wrap(playerFolded + 1)].stack += pot + players[playerFolded].wager + players[wrap(playerFolded + 1)].wager;
 	} 
 	else if (winner == -1) {	//split pot if no winner (same hand)
 		int split = pot / players.size();

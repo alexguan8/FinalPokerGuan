@@ -1,6 +1,16 @@
-﻿  GameEngine.cpp
-c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\gameengine.cpp(79): warning C4018: '>=': signed/unsigned mismatch
-c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\gameengine.cpp(91): warning C4018: '<': signed/unsigned mismatch
+﻿  Table.cpp
+c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(27): warning C4018: '>': signed/unsigned mismatch
+c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(33): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(37): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(44): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(59): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(80): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(89): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(139): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(148): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(172): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(186): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(196): warning C4018: '<': signed/unsigned mismatch
   FinalPokerGuan.vcxproj -> C:\Users\alexg\OneDrive\Documents\PROJECTS\FinalPokerGuan\FinalPokerGuan\bin\FinalPokerGuan_debug.exe
   
   	                   2	C:\Users\alexg\OneDrive\Desktop\of_v0.10.1_vs2017_release\libs\fmodex\lib\vs\Win32\

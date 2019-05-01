@@ -58,9 +58,9 @@ void GameEngine::performAction(Action act, int amount) {
 		myTable.players[currentWrapped].bet(0);
 	}
 	else if (act == A_FOLD) {
-		round = R_SHOWDOWN;
 		myTable.players[currentWrapped].folded = true;
 		resetGame();
+		return;
 	}
 	else if (act == A_CALL) {
 		myTable.players[currentWrapped].bet(myTable.getHigh() - myTable.players[currentWrapped].wager);
