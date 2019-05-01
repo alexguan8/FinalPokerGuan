@@ -11,7 +11,7 @@ using namespace std;
 using namespace omp;*/
 
 namespace guanpokergame {
-	enum Round { R_PREFLOP, R_FLOP, R_TURN, R_RIVER };
+	enum Round { R_PREFLOP, R_FLOP, R_TURN, R_RIVER, R_SHOWDOWN };
 	enum Action { A_CHECK, A_FOLD, A_CALL, A_BET };
 	class GameEngine {
 
@@ -31,10 +31,14 @@ namespace guanpokergame {
 		/** Resets round and deals. */
 		void initialize();
 
-		int getUserInput();
+		string getUserInput();
 
-		void startRound();
+		Action getUserAction();
 
 		void performAction(Action act, int amount);
+
+		void playRound();
+
+		void goNextRound();
 	};
 }

@@ -53,5 +53,8 @@ namespace guanpokergame {
 		void dealHoleCards();
 		void dealCommunityCards();
 		void deal();
+
+		/** Do the end of round actions. */
+		void progress();
 	};
 }
