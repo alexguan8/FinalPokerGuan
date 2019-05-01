@@ -50,7 +50,7 @@ void GameEngine::performAction(Action act, int amount) {
 	else if (act == A_FOLD) {
 		myTable.players[current].folded = true;
 	}
-	else if (act == A_CALL) {
+	else if (act == A_CALL) {	//d o something
 		myTable.players[current].bet(myTable.getHigh() - myTable.players[current].wager);
 	}
 	else if (act == A_BET) {
@@ -68,11 +68,11 @@ void GameEngine::playRound() {
 		|| myTable.getHigh() > myTable.players[myTable.currentIndex].wager) {
 		Player currentPlayer = myTable.players[myTable.currentIndex];
 		//if player is out, then move on
-		if (!currentPlayer.canDecide) {
+		if (!currentPlayer.canDecide()) {
 			myTable.currentIndex++;
 			continue;
 		}
-
+		cout << "Hello Player " + myTable.currentIndex + 1;
 		//if playing from behind
 		if (myTable.getHigh() > currentPlayer.wager) {
 			cout << "Will you fold, call or raise?" << endl;
@@ -93,7 +93,23 @@ void GameEngine::playRound() {
 		}
 
 		//if playing ahead
-		if ()
+		if (myTable.getHigh() <= currentPlayer.wager) {
+			cout << "Will you fold, check or bet?" << endl;
+			string response = getUserInput();
+
+			if (response == "fold") {
+				performAction(A_FOLD, 0);
+			}
+			if (response == "check") {
+				performAction(A_CHECK, 0);
+			}
+			if (response == "bet") {
+				cout << "Bet how much?" << endl;
+				string betAmt = getUserInput();
+
+				performAction(A_BET, stoi(betAmt));
+			}
+		}
 	}
 
 	goNextRound();

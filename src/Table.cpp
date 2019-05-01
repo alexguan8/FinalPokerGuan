@@ -140,7 +140,6 @@ void Table::clear() {
 }
 
 void Table::progress() {
-	this->dealer = 0;
 	this->currentIndex = 1;
 
 	for (int i = 0; i < players.size(); i++) {

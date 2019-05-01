@@ -34,6 +34,7 @@ void ofApp::setup(){
 	folder->addColorPicker("** picker", ofColor::fromHex(0xFFD00B));
 	// let's have it open by default. note: call this only after you're done adding items //
 	folder->expand();
+
 }
 
 void ofApp::loadCardImages() {
@@ -94,12 +95,15 @@ void ofApp::draw(){
 	}
 	
 	//betting chips
-	if (engine.myTable.players[0].wager > 0) {
+	int p1wager = engine.myTable.players[0].wager;
+	if (p1wager > 0) {
 		p1WagerImg.draw(1700, 800, 120, 200);
+		ofDrawBitmapString(to_string(p1wager), 1750, 800);
 	}
-
-	if (engine.myTable.players[1].wager > 0) {
-		p1WagerImg.draw(740, 800, 120, 200);
+	int p2wager = engine.myTable.players[1].wager;
+	if (p2wager > 0) {
+		p2WagerImg.draw(740, 800, 120, 200);
+		ofDrawBitmapString(to_string(p2wager), 800, 800);
 	}
 }
 
@@ -120,6 +124,11 @@ void ofApp::keyPressed(int key){
 			loadCardImages();
 		}
 	}
+
+	/*
+	if (key == 's') {
+		engine.playRound();
+	}*/
 }
 
 //--------------------------------------------------------------
