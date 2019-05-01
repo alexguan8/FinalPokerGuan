@@ -164,10 +164,20 @@ int Table::getWinner() {
 }
 
 void Table::progressGame() {
+	//check if game is progressing bc of folds
+	int playerFolded = -1;
+	for (int i = 0; i < players.size(); i++) {
+		if (players[i].folded) {
+			playerFolded = i;
+		}
+	}
+
 	int winner = getWinner();
 
-	//split pot if no winner (same hand)
-	if (winner == -1) {
+	if (playerFolded >= 0) {
+		players[wrap(playerFolded + 1)].stack += pot;
+	} 
+	else if (winner == -1) {	//split pot if no winner (same hand)
 		int split = pot / players.size();
 		for (int i = 0; i < players.size(); i++) {
 			players[i].stack += split;

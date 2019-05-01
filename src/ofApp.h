@@ -46,6 +46,7 @@ class ofApp : public ofBaseApp{
 		ofImage p2WagerImg;
 
 		ofImage potImg;
+		ofImage turnImg;
 
 		ofImage backgroundTable;
 

@@ -15,6 +15,7 @@ void ofApp::setup(){
 	p1WagerImg.load("images/chips.png");
 	p2WagerImg.load("images/chips.png");
 	potImg.load("images/pot.png");
+	turnImg.load("images/turn.png");
 
 	loadCardImages();
 
@@ -42,12 +43,24 @@ void ofApp::setup(){
 void ofApp::onTextInputEvent(ofxDatGuiTextInputEvent e)
 {
 	cout << "onTextInputEvent: " << e.target->getLabel() << " " << e.target->getText() << endl; 
-	engine.performAction(A_BET, stoi(e.target->getText()));
+	string out = e.target->getText();
+	if (out.size() > 0) {
+		engine.performAction(A_BET, stoi(out));
+	}
 }
 
 void ofApp::onButtonEvent(ofxDatGuiButtonEvent e)
 {
 	cout << "onButtonEvent: " << e.target->getLabel() << endl;
+	if (e.target->getLabel() == "Check") {
+		engine.performAction(A_CHECK, 0);
+	}
+	else if (e.target->getLabel() == "Call") {
+		engine.performAction(A_CALL, 0);
+	}
+	else if (e.target->getLabel() == "Fold") {
+		engine.performAction(A_FOLD, 0);
+	}
 }
 
 void ofApp::loadCardImages() {
@@ -88,7 +101,7 @@ void ofApp::draw(){
 	ofDrawBitmapString("Player 1", 1950, 1050);
 
 	int p1Stack = engine.myTable.players[0].stack;
-	ofDrawBitmapString("Stack: " + to_string(p1Stack), 1950, 1100);
+	ofDrawBitmapString("Stack: $" + to_string(p1Stack), 1950, 1100);
 
 
 	//player 2
@@ -97,13 +110,13 @@ void ofApp::draw(){
 	ofDrawBitmapString("Player 2", 550, 1050);
 
 	int p2Stack = engine.myTable.players[1].stack;
-	ofDrawBitmapString("Stack: " + to_string(p2Stack), 550, 1100);
+	ofDrawBitmapString("Stack: $" + to_string(p2Stack), 550, 1100);
 
 	//pot drawing logic
 	int pot = engine.myTable.pot;
 	if (pot > 0) {
-		potImg.draw(1000, 1100, 120, 200);
-		ofDrawBitmapString(to_string(pot), 1000, 1200);
+		potImg.draw(1200, 1100, 120, 120);
+		ofDrawBitmapString("$" + to_string(pot), 1250, 1250);
 	}
 
 
@@ -134,7 +147,7 @@ void ofApp::draw(){
 		communityCard5.draw(1480, 800, 120, 200);
 	}
 	
-	//betting chips
+	//betting chips drawing
 	int p1wager = engine.myTable.players[0].wager;
 	if (p1wager > 0) {
 		p1WagerImg.draw(1700, 800, 120, 200);
@@ -148,9 +161,11 @@ void ofApp::draw(){
 
 	//draw whos turn it is
 	if (engine.myTable.wrap(engine.myTable.currentIndex) == 0) {
+		turnImg.draw(1950, 580, 120, 200);
 		ofDrawBitmapString("Player 1 turn", 1240, 450);
 	}
 	if (engine.myTable.wrap(engine.myTable.currentIndex) == 1) {
+		turnImg.draw(520, 580, 120, 200);
 		ofDrawBitmapString("Player 2 turn", 1240, 450);
 	}
 }

@@ -40,8 +40,8 @@ void GameEngine::goNextRound() {
 }
 
 void GameEngine::resetGame() {
-	this->round = R_PREFLOP;
 	myTable.progressGame();
+	this->round = R_PREFLOP;
 }
 
 void GameEngine::performAction(Action act, int amount) {
@@ -58,7 +58,9 @@ void GameEngine::performAction(Action act, int amount) {
 		myTable.players[currentWrapped].bet(0);
 	}
 	else if (act == A_FOLD) {
+		round = R_SHOWDOWN;
 		myTable.players[currentWrapped].folded = true;
+		resetGame();
 	}
 	else if (act == A_CALL) {
 		myTable.players[currentWrapped].bet(myTable.getHigh() - myTable.players[currentWrapped].wager);
