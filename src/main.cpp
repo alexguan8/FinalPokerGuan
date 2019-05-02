@@ -1,4 +1,4 @@
-using namespace std;
+/*using namespace std;
 
 #include <iostream>
 #include "GameEngine.hpp"
@@ -13,14 +13,6 @@ using namespace omp;
 
 
 int main() {
-	/*
-	Deck testDeck = Deck();
-	testDeck.shuffle();
-
-	for (int i = 0; i < 52; i++) {
-		Card temp = testDeck.next();
-		cout << to_string(temp.getRank()) + " of " + suitNames[temp.getSuit()] << endl;
-	}*/
 
 	HandEvaluator eval;
 	Hand h = Hand::empty(); // Final hand must include empty() exactly once!
@@ -36,4 +28,4 @@ int main() {
 	// pass in width and height too:
 	ofRunApp(new ofApp());
 
-}
+}*/

@@ -1,4 +1,4 @@
-/*using namespace std;
+using namespace std;
 
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
@@ -14,6 +14,8 @@ Card testCard;
 Deck testDeck;
 Player testPlayer;
 Table testTable;
+
+GameEngine engine;
 
 HandEvaluator testEval;
 
@@ -45,7 +47,7 @@ TEST_CASE("tests for deck shuffle") {
 
 TEST_CASE("tests for player methods") {
 	testPlayer = Player();
-	REQUIRE(testPlayer.isCleaned());
+	REQUIRE(testPlayer.stack == 1000);
 }
 
 TEST_CASE("tests for cardToIndex() method") {
@@ -129,4 +131,54 @@ TEST_CASE("test getting file name from Card") {
 TEST_CASE("test getting file name from card -- ACE") {
 	testCard = Card(14, CLUBS);
 	REQUIRE(testCard.toFilePath() == "images/AC.png");
-}*/
+}
+
+TEST_CASE("test for getting current card") {
+	testDeck = Deck();
+	REQUIRE(testDeck.getCurrentCard().getRank() == 2);
+}
+
+TEST_CASE("test for deal()") {
+	testTable = Table();
+	testTable.deal();
+	REQUIRE(testTable.players[0].holeCards.size() == 2);
+	REQUIRE(testTable.players[1].holeCards.size() == 2);
+	REQUIRE(testTable.communityCards.size() == 5);
+}
+
+TEST_CASE("test for progressRound()") {
+	testTable = Table();
+	testTable.deal();
+	
+	testTable.progressRound();
+
+	REQUIRE(testTable.players[0].wager == 0);
+}
+
+TEST_CASE("test for engine goNextRound()") {
+	engine = GameEngine();
+
+	engine.round = R_FLOP;
+
+	engine.goNextRound();
+
+	REQUIRE(engine.round == R_TURN);
+	REQUIRE(engine.myTable.players[0].wager == 0);
+}
+
+//should reset game
+TEST_CASE("test for engine goNextRound() when on RIVER") {
+	engine = GameEngine();
+
+	engine.round = R_RIVER;
+
+	engine.goNextRound();
+
+	REQUIRE(engine.round == R_PREFLOP);
+	//antes UP
+	REQUIRE(engine.myTable.players[0].wager == 50);
+	REQUIRE(engine.myTable.pot == 0);
+}
+
+
+
