@@ -60,3 +60,14 @@ class ofApp : public ofBaseApp{
 		void onTextInputEvent(ofxDatGuiTextInputEvent e);
 		void onButtonEvent(ofxDatGuiButtonEvent e);
 };
+
+class CustomTheme : public ofxDatGuiTheme {
+public:
+	CustomTheme() {
+		font.size = 12;
+		layout.height = 35;
+		layout.width = 400;
+		layout.upperCaseLabels = false;
+		init();
+	}
+};

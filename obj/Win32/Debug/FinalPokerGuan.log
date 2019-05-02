@@ -1,16 +1,68 @@
-﻿  Table.cpp
-c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(27): warning C4018: '>': signed/unsigned mismatch
-c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(33): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(37): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(44): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(59): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(80): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(89): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(139): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(148): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(172): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(186): warning C4018: '<': signed/unsigned mismatch
-c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\table.cpp(196): warning C4018: '<': signed/unsigned mismatch
+﻿  main.cpp
+  ofApp.cpp
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguislider.h(339): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(184): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(208): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(211): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(223): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(229): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(235): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(242): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(276): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(283): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguitimegraph.h(91): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguitimegraph.h(105): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguitimegraph.h(116): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguitimegraph.h(127): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguitimegraph.h(286): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguitimegraph.h(288): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguiscrollview.h(123): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguiscrollview.h(147): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguiscrollview.h(217): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguislider.h(339): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguiscrollview.h(312): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguiscrollview.h(319): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguiscrollview.h(330): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguiscrollview.h(339): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(97): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(107): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(121): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(197): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(404): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(454): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(483): warning C4018: '>=': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(521): warning C4018: '<': signed/unsigned mismatch (compiling source file src\ofApp.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(184): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(208): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(211): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(223): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(229): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(235): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(242): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(276): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguimatrix.h(283): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguitimegraph.h(91): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguitimegraph.h(105): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguitimegraph.h(116): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguitimegraph.h(127): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguitimegraph.h(286): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguitimegraph.h(288): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguiscrollview.h(123): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguiscrollview.h(147): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguiscrollview.h(217): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguiscrollview.h(312): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguiscrollview.h(319): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguiscrollview.h(330): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguiscrollview.h(339): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(97): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(107): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(121): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(197): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\documents\projects\finalpokerguan\finalpokerguan\src\ofapp.cpp(92): warning C4018: '<': signed/unsigned mismatch
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(404): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(454): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(483): warning C4018: '>=': signed/unsigned mismatch (compiling source file src\main.cpp)
+c:\users\alexg\onedrive\desktop\of_v0.10.1_vs2017_release\addons\ofxdatgui-master\src\components\ofxdatguigroups.h(521): warning C4018: '<': signed/unsigned mismatch (compiling source file src\main.cpp)
   FinalPokerGuan.vcxproj -> C:\Users\alexg\OneDrive\Documents\PROJECTS\FinalPokerGuan\FinalPokerGuan\bin\FinalPokerGuan_debug.exe
   
   	                   2	C:\Users\alexg\OneDrive\Desktop\of_v0.10.1_vs2017_release\libs\fmodex\lib\vs\Win32\

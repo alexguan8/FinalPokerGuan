@@ -21,10 +21,11 @@ void ofApp::setup(){
 
 	//gui stuff below
 	gui = new ofxDatGui(ofxDatGuiAnchor::TOP_RIGHT);
+	gui->setTheme(new CustomTheme());
 	gui->addHeader(":: Drag Me To Reposition ::");
 
 	// add some components //
-	gui->addTextInput("Bet/Raise Amount", "# open frameworks #");
+	gui->addTextInput("Bet/Raise Amount", "0");
 	gui->addButton("Check");
 	gui->addButton("Fold");
 	gui->addButton("Call");
@@ -121,7 +122,10 @@ void ofApp::draw(){
 
 
 	//community card logic
-	if (engine.round == R_FLOP) {
+	if (engine.round == R_PREFLOP) {
+		loadCardImages();
+	}
+	else if (engine.round == R_FLOP) {
 		communityCard1.draw(1000, 800, 120, 200);
 		communityCard2.draw(1120, 800, 120, 200);
 		communityCard3.draw(1240, 800, 120, 200);
