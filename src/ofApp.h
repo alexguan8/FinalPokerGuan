@@ -32,6 +32,7 @@ class ofApp : public ofBaseApp{
 
 		//SPRITES AND IMAGES
 		ofImage p1holeCard1;
+		string p1HoleCard1Path;
 		ofImage p1holeCard2;
 		ofImage p2holeCard1;
 		ofImage p2holeCard2;

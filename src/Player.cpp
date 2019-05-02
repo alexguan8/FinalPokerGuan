@@ -26,7 +26,13 @@ bool Player::isAllIn() {
 }
 
 bool Player::isCleaned() {
-	return stack <= 0 && wager <= 0;
+	if (stack < 0) {
+		return true;
+	}
+	else {
+		return stack == 0 && wager <= 0;
+	}
+	
 }
 
 void Player::clearCards() {

@@ -65,21 +65,25 @@ void ofApp::onButtonEvent(ofxDatGuiButtonEvent e)
 }
 
 void ofApp::loadCardImages() {
-	p1holeCard1.load(engine.getHoleCardsOfPlayer(0)[0].toFilePath());
-	cout << "Loading " + engine.getHoleCardsOfPlayer(0)[0].toFilePath();
-	p1holeCard2.load(engine.getHoleCardsOfPlayer(0)[1].toFilePath());
-	cout << "Loading " + engine.getHoleCardsOfPlayer(0)[1].toFilePath();
+	if (p1HoleCard1Path != engine.getHoleCardsOfPlayer(0)[0].toFilePath()) {
+		p1HoleCard1Path = engine.getHoleCardsOfPlayer(0)[0].toFilePath();
 
-	p2holeCard1.load(engine.getHoleCardsOfPlayer(1)[0].toFilePath());
-	cout << "Loading " + engine.getHoleCardsOfPlayer(1)[0].toFilePath();
-	p2holeCard2.load(engine.getHoleCardsOfPlayer(1)[1].toFilePath());
-	cout << "Loading " + engine.getHoleCardsOfPlayer(1)[1].toFilePath();
+		p1holeCard1.load(p1HoleCard1Path);
+		cout << "Loading " + engine.getHoleCardsOfPlayer(0)[0].toFilePath();
+		p1holeCard2.load(engine.getHoleCardsOfPlayer(0)[1].toFilePath());
+		cout << "Loading " + engine.getHoleCardsOfPlayer(0)[1].toFilePath();
 
-	communityCard1.load(engine.myTable.communityCards[0].toFilePath());
-	communityCard2.load(engine.myTable.communityCards[1].toFilePath());
-	communityCard3.load(engine.myTable.communityCards[2].toFilePath());
-	communityCard4.load(engine.myTable.communityCards[3].toFilePath());
-	communityCard5.load(engine.myTable.communityCards[4].toFilePath());
+		p2holeCard1.load(engine.getHoleCardsOfPlayer(1)[0].toFilePath());
+		cout << "Loading " + engine.getHoleCardsOfPlayer(1)[0].toFilePath();
+		p2holeCard2.load(engine.getHoleCardsOfPlayer(1)[1].toFilePath());
+		cout << "Loading " + engine.getHoleCardsOfPlayer(1)[1].toFilePath();
+
+		communityCard1.load(engine.myTable.communityCards[0].toFilePath());
+		communityCard2.load(engine.myTable.communityCards[1].toFilePath());
+		communityCard3.load(engine.myTable.communityCards[2].toFilePath());
+		communityCard4.load(engine.myTable.communityCards[3].toFilePath());
+		communityCard5.load(engine.myTable.communityCards[4].toFilePath());
+	}
 }
 
 //--------------------------------------------------------------
@@ -89,12 +93,6 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	for (int i = 0; i < engine.myTable.players.size(); i++) {
-		if (engine.myTable.players[i].isCleaned()) {
-			ofDrawBitmapString("Player " + to_string(i + 1) + "has lost", 1240, 500);
-		}
-	}
-
 	//player 1
 	backgroundTable.draw(0, 0, 2560, 1920);
 	p1holeCard1.draw(2000,800, 120, 200);
@@ -124,6 +122,12 @@ void ofApp::draw(){
 	//community card logic
 	if (engine.round == R_PREFLOP) {
 		loadCardImages();
+		for (int i = 0; i < engine.myTable.players.size(); i++) {
+			if (engine.myTable.players[i].isCleaned()) {
+				ofDrawBitmapString("Player " + to_string(i + 1) + "has lost", 1240, 500);
+				ofExit();
+			}
+		}
 	}
 	else if (engine.round == R_FLOP) {
 		communityCard1.draw(1000, 800, 120, 200);

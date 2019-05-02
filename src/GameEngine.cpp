@@ -55,6 +55,9 @@ void GameEngine::performAction(Action act, int amount) {
 	}
 
 	if (act == A_CHECK) {
+		if (myTable.players[currentWrapped].wager < myTable.getHigh()) {
+			return;
+		}
 		myTable.players[currentWrapped].bet(0);
 	}
 	else if (act == A_FOLD) {
